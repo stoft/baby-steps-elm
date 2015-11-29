@@ -1,15 +1,13 @@
 # Disco Box
 
-This exercise can be run either using `[Graphics.Collage](http://package.elm-lang.org/packages/elm-lang/core/3.0.0/Graphics-Collage)` or using [Graphics.Element](http://package.elm-lang.org/packages/elm-lang/core/3.0.0/Graphics-Element). Pick one and run with that. The below steps use `Graphics.Collage`.
+This exercise can be run using either [Graphics.Collage](http://package.elm-lang.org/packages/elm-lang/core/3.0.0/Graphics-Collage) or [Graphics.Element](http://package.elm-lang.org/packages/elm-lang/core/3.0.0/Graphics-Element). Pick one and run with that. The below steps use `Graphics.Collage`.
 
 ## Steps
 
-### 1. Make a box that's black
+1. Make a box that's black
 
-Hints:
+Package Hints: [Hint1](http://package.elm-lang.org/packages/elm-lang/core/3.0.0/Color), [Hint2](http://package.elm-lang.org/packages/elm-lang/core/3.0.0/Graphics-Collage)
 
-* [Package Hint1](http://package.elm-lang.org/packages/elm-lang/core/3.0.0/Color)
-* [Package Hint2](http://package.elm-lang.org/packages/elm-lang/core/3.0.0/Graphics-Collage)
 * [Function Hint1](http://package.elm-lang.org/packages/elm-lang/core/3.0.0/Graphics-Collage#square)
 * [Function Hint2](http://package.elm-lang.org/packages/elm-lang/core/3.0.0/Graphics-Collage#collage)
 * [Function Hint3](http://package.elm-lang.org/packages/elm-lang/core/3.0.0/Graphics-Collage#filled)
