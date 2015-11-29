@@ -1,18 +1,24 @@
 module DiscoBoxElement where
 
-import Color exposing (Color, black, white)
+import Array exposing (fromList, get)
+import Color exposing (Color, green, red, blue, yellow, brown, purple, orange)
 import Graphics.Element exposing (Element, spacer, color)
-import Time exposing (every, millisecond)
+import Random exposing (generate, initialSeed)
+import Time exposing (every, millisecond, second)
 
 drawSquare : Int -> Int -> Float -> Element
 drawSquare x y t =
-  color (getColor (round t)) <| spacer x y
+  color (getColor (getRandom (round t))) <| spacer x y
+
+getRandom t =
+  fst <| generate (Random.int 0 6) (initialSeed t)
 
 getColor : Int -> Color
-getColor timestamp =
-  if timestamp % 2 == 0 then
-    black
-  else
-    white
+getColor n =
+  let colors =
+      Array.fromList [green, red, blue, yellow, brown, purple, orange]
+      maybeColor = Array.get n colors
+  in
+    Maybe.withDefault green maybeColor
 
-main = Signal.map (drawSquare 10 10) (every (200 * millisecond))
+main = Signal.map (drawSquare 50 50) (every (200 * millisecond))
