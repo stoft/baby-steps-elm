@@ -4,15 +4,18 @@ This exercise can be run using either [Graphics.Collage](http://package.elm-lang
 
 ## Steps
 
-1. Make a box that's black
+#### 1. Make a box that's black
 
-Package Hints: [Hint1](http://package.elm-lang.org/packages/elm-lang/core/3.0.0/Color), [Hint2](http://package.elm-lang.org/packages/elm-lang/core/3.0.0/Graphics-Collage)
+Package Hints:
+[Hint1](http://package.elm-lang.org/packages/elm-lang/core/3.0.0/Color),
+[Hint2](http://package.elm-lang.org/packages/elm-lang/core/3.0.0/Graphics-Collage)
 
-* [Function Hint1](http://package.elm-lang.org/packages/elm-lang/core/3.0.0/Graphics-Collage#square)
-* [Function Hint2](http://package.elm-lang.org/packages/elm-lang/core/3.0.0/Graphics-Collage#collage)
-* [Function Hint3](http://package.elm-lang.org/packages/elm-lang/core/3.0.0/Graphics-Collage#filled)
+Function Hints:
+[Hint1](http://package.elm-lang.org/packages/elm-lang/core/3.0.0/Graphics-Collage#square), 
+[Hint2](http://package.elm-lang.org/packages/elm-lang/core/3.0.0/Graphics-Collage#collage),
+[Hint3](http://package.elm-lang.org/packages/elm-lang/core/3.0.0/Graphics-Collage#filled)
 
-### 2. Make a box that blinks every second
+#### 2. Make a box that blinks every second
 
 Hints:
 
@@ -21,7 +24,7 @@ Hints:
 * [Function Hint1](http://package.elm-lang.org/packages/elm-lang/core/3.0.0/Time#every)
 * [Function Hint2](http://package.elm-lang.org/packages/elm-lang/core/3.0.0/Signal#map)
 
-### 3. Make a box that switches between 7 colors every 200ms
+#### 3. Make a box that switches between 7 colors every 200ms
 
 Hints:
 
@@ -29,7 +32,7 @@ Hints:
 * [Function Hint1](http://package.elm-lang.org/packages/elm-lang/core/3.0.0/Array#fromList)
 * [Function Hint2](http://package.elm-lang.org/packages/elm-lang/core/3.0.0/Array#get)
 
-### 4. Make a box that switches colors randomly every 200ms
+#### 4. Make a box that switches colors randomly every 200ms
 
 Hints:
 
@@ -39,7 +42,7 @@ Hints:
 * [Function Hint3](http://package.elm-lang.org/packages/elm-lang/core/3.0.0/Random#int)
 
 
-### 5. Redo the above using Graphics.Element!
+#### 5. Redo the above using Graphics.Element!
 
 Hints:
 
