@@ -1,4 +1,4 @@
-module DiscoBox where
+module DiscoBoxCollage where
 
 import Array
 import Color exposing (Color, green, red, blue, yellow, brown, purple, orange)
