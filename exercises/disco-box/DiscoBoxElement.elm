@@ -1,10 +1,18 @@
 module DiscoBoxElement where
 
-import Color exposing (Color, black)
+import Color exposing (Color, black, white)
 import Graphics.Element exposing (Element, spacer, color)
+import Time exposing (every, millisecond)
 
-drawSquare : Int -> Int -> Color -> Element
-drawSquare x y c =
-  color c <| spacer x y
+drawSquare : Int -> Int -> Float -> Element
+drawSquare x y t =
+  color (getColor (round t)) <| spacer x y
 
-main = drawSquare 10 10 black
+getColor : Int -> Color
+getColor timestamp =
+  if timestamp % 2 == 0 then
+    black
+  else
+    white
+
+main = Signal.map (drawSquare 10 10) (every (200 * millisecond))
