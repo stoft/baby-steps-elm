@@ -1,6 +1,6 @@
 module DiscoBoxen where
 
-import Array exposing (fromList, get)
+--import Array exposing (fromList, get)
 import Color exposing (Color, black, white, green, red, blue, yellow, brown, purple, orange)
 import Graphics.Element exposing (Element, spacer, color, flow, right, show)
 import List exposing (foldr, (::))
@@ -14,7 +14,7 @@ drawSquare x y c =
 drawSquares : Int -> List Element
 drawSquares r =
   foldr
-    (\x acc -> (::) 
+    (\x acc -> (::)
       (if r == x then
         drawSquare 10 10 white
       else
@@ -23,24 +23,26 @@ drawSquares r =
     []
     [1..10]
 
+getColor : Int -> Color
 getColor n =
   if n % 2 == 0 then
     black
   else
     white
 
+getRandomBoxNum : Float -> Signal Int
 getRandomBoxNum n =
   let doGenerate seed =
         generate (Random.int 1 10) (initialSeed (round seed)) |> fst
-      current = Signal.map doGenerate (every (n * millisecond))
-  in 
-    current
+  in
+    Signal.map doGenerate (every (n * millisecond))
 
 {-getRandomBoxNum seed =
   generate (Random.int 1 10) (initialSeed (round seed)) |> fst
 
-main = 
+main =
   Signal.map (flow right) (Signal.map drawSquares (Signal.map getRandomBoxNum (every (200 * millisecond))))
 -}
-main = 
+main : Signal Element
+main =
   Signal.map (flow right) (Signal.map drawSquares (getRandomBoxNum 200))
