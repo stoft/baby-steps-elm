@@ -14,3 +14,4 @@ Example solutions will be included where possible. There are no guarantees that 
 
 1. [FizzBuzz](fizzbuzz/)
 2. [DiscoBox](disco-box/)
+3. [DiscoBoxen](disco-boxen/)
